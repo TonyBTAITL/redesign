@@ -34,7 +34,6 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   font-family: "Roboto", sans-serif;
-  overflow: hidden;
 }
 
 ol, ul {
@@ -147,7 +146,7 @@ nav .nav {
   align-items: center;
   gap: 40px;
   height: 50px;
-  padding: 50px 10px;
+  padding: 40px 10px;
 }
 nav .nav .navRight {
   display: flex;
@@ -164,9 +163,33 @@ nav .nav a {
   font-size: 16px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 999;
+  transition: 1s;
+}
+
+.sticky + .content {
+  padding-top: 130px;
+}
+
+nav.sticky .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  height: 50px;
+  padding: 10px 10px;
+  transition: 1s;
+}
+
 .firstSection {
   display: flex;
   justify-content: space-between;
+  padding: 50px 10px;
 }
 .firstSection .leftFirstSection {
   display: flex;
@@ -206,7 +229,7 @@ nav .nav a {
   background: rgb(190, 10, 10);
   background: linear-gradient(58deg, rgb(190, 10, 10) 0%, rgb(107, 15, 15) 100%);
   top: 0;
-  right: 0;
+  right: 25px;
   z-index: -1;
   animation: movingb 7s infinite ease-in-out;
 }
@@ -298,4 +321,107 @@ nav .nav a {
 
 .opacity-visible .opacity-3 {
   transition-delay: 1.2s;
+}
+
+.description {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f2f2f2;
+}
+.description .text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.description .text h2 {
+  font-size: 36px;
+  color: #666;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+.description .text h2 span {
+  text-transform: none;
+}
+.description .text p {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.information {
+  padding: 50px 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.information .left {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.information .left .image img {
+  border-radius: 20px;
+}
+.information .left .icon {
+  background: var(--red);
+  border-radius: 20px;
+  position: absolute;
+  top: 83%;
+  right: -8%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: movinge 7s infinite ease-in-out;
+}
+.information .left .icon span {
+  font-size: 40px;
+}
+.information .left .icon h3 {
+  font-size: 20px;
+  font-weight: 500;
+  width: 125px;
+}
+@keyframes movinge {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+.information .right {
+  display: flex;
+  flex-direction: column;
+  flex: 0 40%;
+  gap: 10px;
+}
+.information .right .element {
+  display: flex;
+  padding: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 1px solid #efefef;
+  border-radius: 20px;
+  align-items: center;
+  gap: 22px;
+}
+.information .right .element h3 {
+  font-weight: bold;
+}
+.information .right .element .text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.information .right .element .text p {
+  line-height: 21px;
+  color: #666;
+}
+.information .right .element .icon span {
+  font-size: 30px;
 }/*# sourceMappingURL=style.css.map */
