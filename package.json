@@ -1,0 +1,22 @@
+{
+  "name": "redesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TonyBTAITL/redesign.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TonyBTAITL/redesign/issues"
+  },
+  "homepage": "https://github.com/TonyBTAITL/redesign#readme",
+  "dependencies": {
+    "sass": "^1.58.3"
+  }
+}
